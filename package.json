@@ -1,0 +1,32 @@
+{
+	"name": "labs",
+	"description": "Here you'll find some online experiments, proofs of concept and small utilities intended to help in my own everyday tasks.",
+	"author": "Emili García Almazán",
+	"license": "CC BY 4.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/emili/labs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/emili/labs/issues"
+	},
+	"homepage": "https://github.com/emili/labs#readme",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"start": "sirv public"
+	},
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^8.0.0",
+		"@rollup/plugin-typescript": "^5.0.2",
+		"rollup": "^2.3.4",
+		"rollup-plugin-livereload": "^1.0.0",
+		"rollup-plugin-svelte": "^5.0.3",
+		"rollup-plugin-terser": "^5.1.2",
+		"sirv-cli": "^1.0.3",
+		"svelte": "^3.0.0",
+		"tslib": "^2.0.0",
+		"typescript": "^3.9.7"
+	}
+}
