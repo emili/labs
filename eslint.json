@@ -1,0 +1,22 @@
+{
+	"defaultSeverity": "error",
+	"extends": ["eslint:recommended"],
+	"jsRules": {},
+	"rules": {
+		"indent": [true,"tabs"],
+		"member-access": true,
+		"no-angle-bracket-type-assertion": true,
+		"no-any": true,
+		"no-magic-numbers": true,
+		"no-unnecessary-type-assertion": true,
+		"no-var-keyword": true,
+		"prefer-const": true,
+		"prefer-for-of": true,
+		"radix": false,
+		"trailing-comma": false,
+		"triple-equals": true,
+		"typedef": true,
+		"unified-signatures": true
+	},
+	"rulesDirectory": []
+}

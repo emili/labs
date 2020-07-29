@@ -1,0 +1,24 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"alwaysStrict": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "es6",
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		//"noUnusedLocals": true,
+		"plugins": [
+			{
+				"name": "typescript-tslint-plugin",
+				"configFile": "./eslint.json"
+			}
+		],
+		"removeComments": true,
+		"strict": true,
+		"target": "es6",
+		"types": ["svelte"]
+	},
+	"exclude": ["nodemodules/*"],
+	"include": ["src/**/*"]
+}
