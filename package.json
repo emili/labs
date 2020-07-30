@@ -16,7 +16,7 @@
 		"build": "rollup -c",
 		"dev": "rollup -c -w",
 		"start": "sirv public",
-		"deploy": "npm run build && gh-pages -d public -b public"
+		"deploy": "npm run build && gh-pages -d public"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^8.0.0",
