@@ -2,7 +2,7 @@
 	"name": "labs",
 	"description": "Here you'll find some online experiments, proofs of concept and small utilities intended to help in my own everyday tasks.",
 	"author": "Emili García Almazán",
-	"license": "CC BY 4.0",
+	"license": "CC-BY-4.0",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/emili/labs.git"
@@ -10,16 +10,18 @@
 	"bugs": {
 		"url": "https://github.com/emili/labs/issues"
 	},
-	"homepage": "https://github.com/emili/labs#readme",
+	"homepage": "https://emili.github.io/labs",
 	"version": "1.0.0",
 	"scripts": {
 		"build": "rollup -c",
 		"dev": "rollup -c -w",
-		"start": "sirv public"
+		"start": "sirv public",
+		"deploy": "npm run build && gh-pages -d public -b public"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^8.0.0",
 		"@rollup/plugin-typescript": "^5.0.2",
+		"gh-pages": "^3.1.0",
 		"rollup": "^2.3.4",
 		"rollup-plugin-livereload": "^1.0.0",
 		"rollup-plugin-svelte": "^5.0.3",
