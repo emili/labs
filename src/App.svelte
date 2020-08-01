@@ -1,5 +1,5 @@
-<script>
-	export let place;
+<script lang="ts">
+	export let place: string;
 </script>
 
 <main>
