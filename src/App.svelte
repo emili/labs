@@ -1,9 +1,15 @@
 <script lang="ts">
+	import { setupI18n, _, isLocaleLoaded } from "./services/i18n";
+
+	setupI18n();
+
 	export let place: string;
 </script>
 
 <main>
-	<h1>Welcome to {place}</h1>
+	{#if $isLocaleLoaded}
+		<h1>{$_("app.welcome")} {$_(place)}</h1>
+	{/if}
 </main>
 
 <style>
