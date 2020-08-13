@@ -2,7 +2,7 @@
 	"name": "labs",
 	"description": "Here you'll find some online experiments, proofs of concept and small utilities intended to help in my own everyday tasks.",
 	"author": "Emili García Almazán",
-	"license": "CC-BY-4.0",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/emili/labs.git"
