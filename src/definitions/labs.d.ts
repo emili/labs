@@ -17,7 +17,7 @@ declare namespace Emili {
 			}
 
 			/** Outlines the translated values of a simple writing, forcing a fallback language. */
-			interface Translation{
+			interface Translation {
 				ca?: string;
 				en: string;
 				es?: string;
@@ -25,6 +25,9 @@ declare namespace Emili {
 
 			/** Defines the structure of an entry point to a lab. */
 			interface EntryManifest {
+				/** Gets the internal identifier for this record. */
+				codename: string;
+
 				/** Gets the localized object for the name of this entry. */
 				title: Translation;
 
@@ -77,7 +80,7 @@ declare namespace Emili {
 					/** Despite it could be helpful in some way, a connection is not required. */
 					Recommended,
 
-					/** A connection is absolutely required for this lab  */
+					/** A connection is absolutely required for this lab.  */
 					Required
 				}
 
