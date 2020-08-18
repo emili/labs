@@ -16,6 +16,25 @@ export default {
 		name: 'app',
 		file: 'public/build/bundle.js'
 	},
+	moduleContext: (id) => {
+		// Rollup outputs a warning if a module tries to
+		// access `this` at the top level. The following modules 
+		// use `this` at the top level and expect it to be the 
+		// global`window` object, so we tell Rollup to set 
+		// `this = window` for these modules.
+		const thisAsWindowForModules = [
+			"intl-format-cache/lib/index.js",
+			"intl-messageformat/lib/core.js",
+			"intl-messageformat/lib/formatters.js",
+			"intl-messageformat-parser/lib/normalize.js",
+			"intl-messageformat-parser/lib/parser.js",
+			"intl-messageformat-parser/lib/skeleton.js"
+		];
+
+		if (thisAsWindowForModules.some((id_) => id.trimRight().replace(/\\/g, "/").endsWith(id_))) {
+			return "window";
+		}
+	},
 	plugins: [
 		json(),
 		svelte({
