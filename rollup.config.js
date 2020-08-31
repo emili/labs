@@ -1,11 +1,13 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import json from "@rollup/plugin-json";
+import gzipPlugin from 'rollup-plugin-gzip';
 import livereload from 'rollup-plugin-livereload';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import sveltePreprocess from 'svelte-preprocess';
+import { brotliCompressSync } from 'zlib';
 import fs from 'fs';
 import path from 'path';
 
@@ -82,6 +84,12 @@ export default {
 		resolve({
 			browser: true,
 			dedupe: ['svelte']
+		}),
+
+		gzipPlugin({
+			customCompression: content =>
+				brotliCompressSync(Buffer.from(content)),
+			fileName: '.br',
 		}),
 
 		// In dev mode, call `npm run start` once
