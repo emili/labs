@@ -1,0 +1,28 @@
+[
+	{
+		"uniqueName": "privilege-exceptions",
+		"title": {
+			"ca": "Decodificador d'excepcions de privilegis",
+			"en": "Privilege exceptions parser",
+			"es": "Descodificador de excepciones de privilegios"
+		},
+		"description": {
+			"ca": "Analitza ràpidament les traces d'excepcions relacionades amb permisos.",
+			"en": "Quickly analyze privilege exception traces.",
+			"es": "Analiza rápidamente las trazas de excepciones relativas a premisos."
+		},
+		"path": "privilege-exceptions",
+		"iconUrl": "",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2,
+		"connectivity": 1,
+		"executionContext": -1,
+		"area": 2
+	}
+]

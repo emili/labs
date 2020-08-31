@@ -2,9 +2,12 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import json from "@rollup/plugin-json";
 import livereload from 'rollup-plugin-livereload';
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import sveltePreprocess from 'svelte-preprocess';	
+import sveltePreprocess from 'svelte-preprocess';
+import fs from 'fs';
+import path from 'path';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -44,11 +47,32 @@ export default {
 			// a separate file - better for performance
 			css: css => {
 				css.write('public/build/bundle.css');
-			},	
+			},
 			preprocess: sveltePreprocess()
 		}),
 
 		typescript(),
+
+		postcss({
+			config: false,
+			extract: 'public/build/bundle.css',
+			minimize: true,
+			onExtract: (asset) => {
+				// manual merge of an already existing file :(
+				const { code, codeFileName } = asset();
+				let dest = path.resolve(codeFileName);
+				fs.appendFileSync(dest, `\n\n${code}`);
+				return false;
+			},
+			use: {
+				sass: {
+					includePaths: [
+						'./src/theme',
+						'./node_modules'
+					]
+				}
+			}
+		}),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In

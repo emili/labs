@@ -14,7 +14,7 @@ const isDownloading = writable(false);
 
 const MESSAGE_FILE_URL_TEMPLATE = "/lang/{locale}.json";
 
-function setupI18n(targetLocale?: string) {
+function setupI18n(targetLocale?: string): void {
 	const supportedLocale = supported(targetLocale
 		|| language(getLocaleFromNavigator()));
 
@@ -35,7 +35,7 @@ function setupI18n(targetLocale?: string) {
 			);
 
 		// download translation file for given locale/language
-		return loadJson(messagesFileUrl)
+		loadJson(messagesFileUrl)
 			.then((messages) => {
 				_activeLocale = supportedLocale;
 				addMessages(supportedLocale, messages);
@@ -47,7 +47,7 @@ function setupI18n(targetLocale?: string) {
 
 async function loadJson(url: string): Promise<any> {
 	const response = await fetch(url);
-	return await response.json();
+	return response.json();
 }
 
 function hasLoadedLocale(locale: string): any {
@@ -79,4 +79,4 @@ function supported(locale: string): string {
 
 // we expose the svelte-i18n _ store so that our app has
 // a single API for i18n
-export { _, setupI18n, isLocaleLoaded };
+export { _, setupI18n, isLocaleLoaded, locale };
