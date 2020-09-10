@@ -1,11 +1,9 @@
-const locales: Emili.Labs.Configuration.Translation = {
+const locales: Emili.Translation = {
 	ca: "Català",
 	en: "English",
 	es: "Español"
 }
 
-const fallbackLocale:
-	keyof Emili.Labs.Configuration.Translation
-	= "en";
+const fallbackLocale = Emili.Language.en;
 
 export { locales, fallbackLocale };

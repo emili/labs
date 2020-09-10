@@ -1,6 +1,21 @@
 declare namespace Emili {
+
+	const enum Language {
+		ca = "ca",
+		en = "en",
+		es = "es"
+	}
+
+	type Languages = keyof typeof Language;
+
+	/** Outlines the translated values of a simple writing. */
+	type Translation = {
+		[key in Languages]: string;
+	}
+
 	namespace Labs {
 		namespace Configuration {
+
 			/** Specifies the badge shown on an entry to highlight it in some way. */
 			const enum Badge {
 				/** No special badge is shown. */
@@ -14,13 +29,6 @@ declare namespace Emili {
 
 				/** Marks this as a beta version, the test stage before being widely released. */
 				Beta
-			}
-
-			/** Outlines the translated values of a simple writing, forcing a fallback language. */
-			interface Translation {
-				ca?: string;
-				en: string;
-				es?: string;
 			}
 
 			/** Defines the structure of an entry point to a lab. */
@@ -53,10 +61,10 @@ declare namespace Emili {
 				lastUpdatedOn: Date;
 
 				/** Gets the color for the background of the entry. */
-				backColor?: string;
+				backColor: string;
 
 				/** Gets the color for the text and icon of the entry. */
-				foreColor?: string;
+				foreColor: string;
 
 				/** Gets the badge, if any, that will be displayed over the entry. */
 				badge?: Badge;
@@ -100,7 +108,7 @@ declare namespace Emili {
 				}
 
 				/** Defines the structure of an entry point to a lab in the Dynamics Companion subarea. */
-				interface EntryManifest extends Configuration.EntryManifest {
+				interface EntryManifest extends Labs.Configuration.EntryManifest {
 					/** Gets a value stating whether a connection to the platform is required. */
 					connectivity: ConnectivityLevel;
 

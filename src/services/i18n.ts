@@ -1,4 +1,4 @@
-import { get, derived, writable } from "svelte/store";
+import { get, derived, writable, Writable } from "svelte/store";
 import {
 	addMessages,
 	locale,
@@ -11,6 +11,7 @@ import { locales, fallbackLocale } from "../config/l10n";
 
 let _activeLocale: string;
 const isDownloading = writable(false);
+const internalLocale: Writable<string> = locale;
 
 const MESSAGE_FILE_URL_TEMPLATE = "/lang/{locale}.json";
 
@@ -39,7 +40,7 @@ function setupI18n(targetLocale?: string): void {
 			.then((messages) => {
 				_activeLocale = supportedLocale;
 				addMessages(supportedLocale, messages);
-				locale.set(supportedLocale);
+				internalLocale.set(supportedLocale);
 				isDownloading.set(false);
 			});
 	}
@@ -79,4 +80,4 @@ function supported(locale: string): string {
 
 // we expose the svelte-i18n _ store so that our app has
 // a single API for i18n
-export { _, setupI18n, isLocaleLoaded, locale };
+export { _, setupI18n, isLocaleLoaded, internalLocale as locale };

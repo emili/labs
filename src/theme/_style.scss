@@ -1,0 +1,43 @@
+@import "@material/elevation/mdc-elevation";
+@import "smui-theme";
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.accent {
+	color: $mdc-theme-primary;
+}
+
+.accent-back {
+	background-color: $mdc-theme-primary;
+}
+
+.center-block {
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center-block-x-content > * {
+	display: block;
+	margin: 0 auto;
+}
+
+.smui-card__content {
+	padding-top: 100%;
+}
+
+.mdc-card-elevated:focus-within,
+.mdc-card-elevated:hover {
+	@extend .mdc-elevation-transition;
+	@include mdc-elevation(10);
+
+	transform: scale(1.05);
+	transition: transform 0.2s;
+}
