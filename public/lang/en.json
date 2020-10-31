@@ -2,7 +2,7 @@
 	"app": {
 		"title": "ᴇᴍɪʟɪ.ᴅᴇᴠ",
 		"loading": "Loading",
-		"copyright": "Copyright © {year} Emili García i Almazán"
+		"copyright": "Copyright © {year} Emili García i Almazán"
 	},
 	"home": {
 		"labs": {
@@ -21,6 +21,13 @@
 		"privacy": {
 			"text": "Privacy",
 			"href": "/privacy"
+		}
+	},
+	"dyncom": {
+		"areas": {
+			"0": "Interaction",
+			"1": "Navigation",
+			"2": "Debugging"
 		}
 	}
 }

@@ -85,11 +85,11 @@ declare namespace Emili {
 					/** This lab can fully work while offline. */
 					NotRequired,
 
-					/** Despite it could be helpful in some way, a connection is not required. */
-					Recommended,
-
 					/** A connection is absolutely required for this lab.  */
-					Required
+					Required,
+
+					/** Despite it could be helpful in some way, a connection is not required. */
+					Recommended
 				}
 
 				/** Specifies the context(s) in which a lab is meant to be executed. */
@@ -107,6 +107,18 @@ declare namespace Emili {
 					Any = EntityRecord | EntityList | Dashboard
 				}
 
+				/** Defines the section where a lab is grouped. */
+				const enum Area { 
+					/** This lab performs an action over the platform, usually retrieving or modifying information. */
+					Interaction,
+
+					/** This lab is helpful to quickly move to other areas of the platform. */
+					Navigation,
+
+					/** This lab assists in finding and removing defects. */
+					Debugging
+				}
+
 				/** Defines the structure of an entry point to a lab in the Dynamics Companion subarea. */
 				interface EntryManifest extends Labs.Configuration.EntryManifest {
 					/** Gets a value stating whether a connection to the platform is required. */
@@ -114,6 +126,9 @@ declare namespace Emili {
 
 					/** Gets a value that defines the valid context(s) of execution for this lab. */
 					context: ExecutionContext;
+
+					/** Gets a value that defines the area where this lab is displayed. */
+					area: Area;
 				}
 			}
 		}

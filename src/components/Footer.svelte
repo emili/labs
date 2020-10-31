@@ -7,9 +7,10 @@
 	footer {
 		border-top: 1px solid #c0c0c0;
 		bottom: 0;
+		column-gap: 2rem;
 		display: inline-flex;
 		flex-direction: row;
-		column-gap: 2rem;
+		font-size: small;
 		height: 2rem;
 		line-height: 2rem;
 		padding-left: 1rem;

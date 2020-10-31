@@ -1,5 +1,7 @@
 <script>
-	import Svg from "../components/parts/EmbeddedSvg.svelte";
+  import Svg from "../components/parts/Svg.svelte";
 </script>
 
-<Svg src="/img/404.svg" />
+<div class="accent">
+  <Svg src="/img/404.svg" />
+</div>

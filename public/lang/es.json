@@ -1,2 +1,7 @@
 {
+	"app": {
+		"title": "ᴇᴍɪʟɪ.ᴅᴇᴠ",
+		"loading": "Cargando",
+		"copyright": "Copyright © {year} Emili García i Almazán"
+	}
 }

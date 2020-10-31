@@ -23,5 +23,155 @@
 		"createdOn": "",
 		"lastUpdatedOn": "",
 		"badge": 2
+	},
+	{
+		"uniqueName": "dyn-com",
+		"title": {
+			"ca": "Col·lega de Dynamics",
+			"en": "Dynamics Companion",
+			"es": "Colega de Dynamics"
+		},
+		"description": {
+			"ca": "La navalla suïssa que treballarà braç a braç amb la teva instància de Microsoft Dynamics.",
+			"en": "The Swiss army knife that will work side to side with your Microsoft Dynamics instance.",
+			"es": "La navaja suiza que trabajará codo a codo con tu instancia de Microsoft Dynamics."
+		},
+		"path": "dyn-com",
+		"iconUrl": "/img/ico/boat.svg",
+		"backColor": "#00b0ff",
+		"foreColor": "#fff",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2
+	},
+	{
+		"uniqueName": "dyn-com",
+		"title": {
+			"ca": "Col·lega de Dynamics",
+			"en": "Dynamics Companion",
+			"es": "Colega de Dynamics"
+		},
+		"description": {
+			"ca": "La navalla suïssa que treballarà braç a braç amb la teva instància de Microsoft Dynamics.",
+			"en": "The Swiss army knife that will work side to side with your Microsoft Dynamics instance.",
+			"es": "La navaja suiza que trabajará codo a codo con tu instancia de Microsoft Dynamics."
+		},
+		"path": "dyn-com",
+		"iconUrl": "/img/ico/boat.svg",
+		"backColor": "#00b0ff",
+		"foreColor": "#fff",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2
+	},
+	{
+		"uniqueName": "dyn-com",
+		"title": {
+			"ca": "Col·lega de Dynamics",
+			"en": "Dynamics Companion",
+			"es": "Colega de Dynamics"
+		},
+		"description": {
+			"ca": "La navalla suïssa que treballarà braç a braç amb la teva instància de Microsoft Dynamics.",
+			"en": "The Swiss army knife that will work side to side with your Microsoft Dynamics instance.",
+			"es": "La navaja suiza que trabajará codo a codo con tu instancia de Microsoft Dynamics."
+		},
+		"path": "dyn-com",
+		"iconUrl": "/img/ico/boat.svg",
+		"backColor": "#00b0ff",
+		"foreColor": "#fff",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2
+	},
+	{
+		"uniqueName": "dyn-com",
+		"title": {
+			"ca": "Col·lega de Dynamics",
+			"en": "Dynamics Companion",
+			"es": "Colega de Dynamics"
+		},
+		"description": {
+			"ca": "La navalla suïssa que treballarà braç a braç amb la teva instància de Microsoft Dynamics.",
+			"en": "The Swiss army knife that will work side to side with your Microsoft Dynamics instance.",
+			"es": "La navaja suiza que trabajará codo a codo con tu instancia de Microsoft Dynamics."
+		},
+		"path": "dyn-com",
+		"iconUrl": "/img/ico/boat.svg",
+		"backColor": "#00b0ff",
+		"foreColor": "#fff",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2
+	},
+	{
+		"uniqueName": "dyn-com",
+		"title": {
+			"ca": "Col·lega de Dynamics",
+			"en": "Dynamics Companion",
+			"es": "Colega de Dynamics"
+		},
+		"description": {
+			"ca": "La navalla suïssa que treballarà braç a braç amb la teva instància de Microsoft Dynamics.",
+			"en": "The Swiss army knife that will work side to side with your Microsoft Dynamics instance.",
+			"es": "La navaja suiza que trabajará codo a codo con tu instancia de Microsoft Dynamics."
+		},
+		"path": "dyn-com",
+		"iconUrl": "/img/ico/boat.svg",
+		"backColor": "#00b0ff",
+		"foreColor": "#fff",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2
+	},
+	{
+		"uniqueName": "dyn-com",
+		"title": {
+			"ca": "Col·lega de Dynamics",
+			"en": "Dynamics Companion",
+			"es": "Colega de Dynamics"
+		},
+		"description": {
+			"ca": "La navalla suïssa que treballarà braç a braç amb la teva instància de Microsoft Dynamics.",
+			"en": "The Swiss army knife that will work side to side with your Microsoft Dynamics instance.",
+			"es": "La navaja suiza que trabajará codo a codo con tu instancia de Microsoft Dynamics."
+		},
+		"path": "dyn-com",
+		"iconUrl": "/img/ico/boat.svg",
+		"backColor": "#00b0ff",
+		"foreColor": "#fff",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2
 	}
 ]

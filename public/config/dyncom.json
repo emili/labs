@@ -21,8 +21,34 @@
 		"createdOn": "",
 		"lastUpdatedOn": "",
 		"badge": 2,
-		"connectivity": 1,
-		"executionContext": -1,
+		"connectivity": 2,
+		"executionContext": 7,
 		"area": 2
+	},
+	{
+		"uniqueName": "record-editor",
+		"title": {
+			"ca": "Editor de registres",
+			"en": "Record editor",
+			"es": "Editor de registros"
+		},
+		"description": {
+			"ca": "Modifica el valor dels atributs del registre seleccionat.",
+			"en": "Update the value of the attributes for the selected record.",
+			"es": "Modifica el valor de los atributos del registro seleccionado."
+		},
+		"path": "record-editor",
+		"iconUrl": "",
+		"version": "0.1.0",
+		"author": {
+			"name": "Emili García Almazán",
+			"uri": "http://emili.dev"
+		},
+		"createdOn": "",
+		"lastUpdatedOn": "",
+		"badge": 2,
+		"connectivity": 1,
+		"executionContext": 1,
+		"area": 0
 	}
 ]

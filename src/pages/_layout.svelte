@@ -10,9 +10,6 @@
 <style>
 	main {
 		bottom: 0;
-		padding: 14px;
-		/* padding-left: max(2rem, 10%);
-		padding-right: max(2rem, 10%); */
 		position: absolute;
 		left: 0;
 		margin-bottom: 2rem;

@@ -1,0 +1,269 @@
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	input {
+		display: none;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	.swanky_wrapper label {
+		padding: 25px;
+		float: left;
+		height: 72px;
+		background: #212e41;
+		border-bottom: 1px solid #293649;
+		position: relative;
+		width: 100%;
+		color: #eff4fa;
+		-webkit-transition: text-indent .15s, height .3s;
+		transition: text-indent .15s, height .3s;
+		box-sizing: border-box;
+	}
+
+	.swanky_wrapper label img {
+		margin-right: 10px;
+		position: relative;
+		top: 2px;
+		width: 16px;
+	}
+
+	.swanky_wrapper label span {
+		position: relative;
+		top: -3px;
+	}
+
+	.swanky_wrapper label:hover {
+
+		text-indent: 4px;
+	}
+
+	.swanky_wrapper label:hover .bar {
+		width: 100%;
+	}
+
+	.swanky_wrapper label .bar {
+		width: 0px;
+		-webkit-transition: width .15s;
+		transition: width .15s;
+		height: 2px;
+		position: absolute;
+		display: block;
+		background: #355789;
+		bottom: 0;
+		left: 0;
+	}
+
+	.swanky_wrapper label .lil_arrow {
+		width: 5px;
+		height: 5px;
+		-webkit-transition: transform 0.8s;
+		-webkit-transition: -webkit-transform 0.8s;
+		transition: -webkit-transform 0.8s;
+		transition: transform 0.8s;
+		transition: transform 0.8s, -webkit-transform 0.8s;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		border-top: 2px solid white;
+		border-right: 2px solid white;
+		float: right;
+		position: relative;
+		top: 6px;
+		right: 2px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.swanky_wrapper__content {
+		position: absolute;
+		display: none;
+		overflow: hidden;
+		left: 0;
+		width: 100%;
+	}
+
+	.swanky_wrapper__content li {
+		width: 100%;
+		opacity: 0;
+		left: -100%;
+		background: #15a4fa;
+		padding: 25px 0px;
+		text-indent: 25px;
+		box-shadow: 0px 0px #126CA1 inset;
+		-webkit-transition: box-shadow .3s, text-indent .3s;
+		transition: box-shadow .3s, text-indent .3s;
+		position: relative;
+	}
+
+	.swanky_wrapper__content li:hover {
+		background: #0c93e4;
+		box-shadow: 3px 0px #126CA1 inset;
+		-webkit-transition: box-shadow .3s linear, text-indent .3s linear;
+		transition: box-shadow .3s linear, text-indent .3s linear;
+		text-indent: 31px;
+	}
+
+	.swanky_wrapper__content .clear {
+		clear: both;
+	}
+
+	input:checked+label .swanky_wrapper__content {
+		display: block;
+		top: 68px;
+		border-bottom: 1px solid #212e41;
+	}
+
+	input:checked+label>.lil_arrow {
+		-webkit-transition: -webkit-transform 0.8s;
+		transition: -webkit-transform 0.8s;
+		transition: transform 0.8s;
+		transition: transform 0.8s, -webkit-transform 0.8s;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+		border-top: 2px solid #14a3f9;
+		border-right: 2px solid #14a3f9;
+	}
+
+	input:checked+label {
+		height: 353px;
+		background: #212e41;
+		text-indent: 4px;
+		transition-property: height;
+		transition-duration: .6s;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	input:checked+label .bar {
+		width: 0;
+	}
+
+	input:checked+label li:nth-of-type(1) {
+		-webkit-animation: in 0.15s 0.575s forwards;
+		animation: in 0.15s 0.575s forwards;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		-moz-animation: in 0.15s 0.575s forwards;
+		-moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	input:checked+label li:nth-of-type(2) {
+		-webkit-animation: in 0.15s 0.7s forwards;
+		animation: in 0.15s 0.7s forwards;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		-moz-animation: in 0.15s 0.7s forwards;
+		-moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	input:checked+label li:nth-of-type(3) {
+		-webkit-animation: in 0.15s 0.825s forwards;
+		animation: in 0.15s 0.825s forwards;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		-moz-animation: in 0.15s 0.825s forwards;
+		-moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	input:checked+label li:nth-of-type(4) {
+		-webkit-animation: in 0.15s 0.95s forwards;
+		animation: in 0.15s 0.95s forwards;
+		transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		-moz-animation: in 0.15s 0.95s forwards;
+		-moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	@keyframes in {
+		from {
+			left: -100%;
+			opacity: 0;
+		}
+
+		to {
+			left: 0;
+			opacity: 1;
+		}
+	}
+</style>
+
+<div class='swanky_wrapper'>
+	<input id='Dashboard' name='radio' type='checkbox'>
+	<label for='Dashboard'>
+		<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/dash.png'>
+		<span>Dashboard</span>
+		<div class='lil_arrow'></div>
+		<div class='bar'></div>
+		<div class='swanky_wrapper__content'>
+			<ul>
+				<li>Tools</li>
+				<li>Reports</li>
+				<li>Analytics</li>
+				<li>Code Blocks</li>
+			</ul>
+		</div>
+	</label>
+	<input id='Sales' name='radio' type='checkbox'>
+	<label for='Sales'>
+		<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/del.png'>
+		<span>Sales</span>
+		<div class='lil_arrow'></div>
+		<div class='bar'></div>
+		<div class='swanky_wrapper__content'>
+			<ul>
+				<li>New Sales</li>
+				<li>Expired Sales</li>
+				<li>Sales Reports</li>
+				<li>Deliveries</li>
+			</ul>
+		</div>
+	</label>
+	<input id='Messages' name='radio' type='checkbox'>
+	<label for='Messages'>
+		<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mess.png'>
+		<span>Messages</span>
+		<div class='lil_arrow'></div>
+		<div class='bar'></div>
+		<div class='swanky_wrapper__content'>
+			<ul>
+				<li>Inbox</li>
+				<li>Outbox</li>
+				<li>Sent</li>
+				<li>Archived</li>
+			</ul>
+		</div>
+	</label>
+	<input id='Users' name='radio' type='checkbox'>
+	<label for='Users'>
+		<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/users.png'>
+		<span>Users</span>
+		<div class='lil_arrow'></div>
+		<div class='bar'></div>
+		<div class='swanky_wrapper__content'>
+			<ul>
+				<li>New User</li>
+				<li>User Groups</li>
+			</ul>
+		</div>
+	</label>
+	<input id='Settings' radio='radio' type='checkbox'>
+	<label for='Settings'>
+		<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/set.png'>
+		<span>Settings</span>
+		<div class='lil_arrow'></div>
+		<div class='swanky_wrapper__content'>
+			<ul>
+				<li>Databases</li>
+				<li>Design</li>
+				<li>Change User</li>
+				<li>Log Out</li>
+			</ul>
+		</div>
+	</label>
+</div>
